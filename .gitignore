@@ -1,0 +1,48 @@
+### Each directory and file, which starts with dot
+.*
+### But not Git ignore and Travis file
+!.gitignore
+!.travis.yml
+
+# Output of compilation and tests
+build
+*.gcda
+*.gcno
+*.gcov
+
+# Output of Build Wrapper
+bw-output
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
