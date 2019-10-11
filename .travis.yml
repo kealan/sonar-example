@@ -8,10 +8,14 @@ addons:
       secure: "mBFMQbdwfkvpAf82dkFT0noTCWcn7Y4BmMcXbs+f/qJZtGUwQBiHvAvxwK0oK28+ySPewvpXmXhQ7oe1mIew5SQFWYRfiKKU6w+yreWSSIgMVLFrxyNM9JDvOf03YEh5f0wXYCsXsvHlN6WRYgQezSOvmZSfAY/E7W+es4jSSKDws4VHjnJoRIIFz8HXBZLw9xG1QbTBav10SU/WLxrWskvfWNAI3yfsidAF+K3SlXtF1ypmqqwqH47cU/1i89mVCQXYprSqY7ZMdc5fDw246D4LEh9UIPq4MFV1zbwbmb36vyDxCwZG1XIRbyhfBgfJXgC+pKx2OUkh/CiC+Fm6rvTYfxiwyq9hchIKpjkjZE2iqyor2NzA72g97cFWYk2VR7WF33apuAKERBHhzlsvLNZeqR+sM3hPcF0i+vSmSR0TS2NC9XIjPuNukkKxRZY2LjnHACRpcNFciOBeQiKXfqSEQanVcSEOHXotFaqM0eRtfhhGOX85F2/5a7EJOUZNHz3jn8VFC+4aeMPWe52KDpruBIhfSCUyyylYzgWaWqhK2ikdIX8Le2mIBYu+3ELQajt7CzEghVA2P1xzglN8SdWkzmlXK8nPhX8hOvjEZcvB3eQC/EX9PqJ3qHDJpto2dGeIqZujTkN/w1rOmdtkvNt2+fg1AO/iekrhlqlOpYE="
 
 script:
-  - make clean
+  - mkdir build
+  - cd build
+  - cmake ..
   # Wraps the compilation with the Build Wrapper to generate configuration (used
   # later by the SonarQube Scanner) into the "bw-output" folder
   - build-wrapper-linux-x86-64 --out-dir bw-output make all
+  - mv bw-output ../
+  - ls
   # Execute some tests
   # - make test
   # And finally run the SonarQube analysis - read the "sonar-project.properties"
