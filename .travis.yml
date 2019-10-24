@@ -17,7 +17,7 @@ script:
   - mv bw-output ../
   - cd ..
   - ls
-  # Execute some tests
+  # Execute some tests - NO NEED TO RUN TESTS
   # - make test
   # And finally run the SonarQube analysis - read the "sonar-project.properties"
   # file to see the specific configuration
