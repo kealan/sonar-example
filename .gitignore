@@ -46,3 +46,6 @@ bw-output
 # Debug files
 *.dSYM/
 *.su
+
+
+idea
